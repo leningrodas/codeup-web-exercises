@@ -1,0 +1,148 @@
+var a = 1;
+// this makes variable a equal to 1
+var b = a++;
+// this will make variable b equate to 2
+var c = ++a;
+// c = 3
+var d = "hello";
+    undefined
+d
+    "hello"
+var e = false;
+    undefined
+e
+    false
+d++;
+    NaN
+e++;
+    0
+var perplexed;
+    undefined
+perplexed + 2;
+    NaN
+var price = 2.7;
+    undefined
+price.toFixed(2);
+    "2.70"
+var price = "2.7";
+    undefined
+price.toFixed(2);
+    error
+isNaN(0)
+    false
+isNaN(1)
+    false
+isNaN("")
+    false
+isNaN("string")
+    true
+isNaN("0")
+    false
+isNaN("1")
+    false
+isNaN("3.145")
+    false
+isNaN(Number.MAX_VALUE)
+    false
+isNaN(infinity)
+    false
+isNaN("true")
+    true
+isNaN(true)
+    false
+isNaN("false")
+    true
+NaN == NaN
+    false
+!true
+    false
+!false
+    true
+!!true
+    true
+!!false
+    false
+!!0
+    false
+!!-0
+    false
+!!1
+    true
+!!-1
+    true
+!!0.1
+    true
+!!"hello"
+    true
+!!""
+    false
+!!''
+    false
+!!"false"
+    true
+!!"0"
+    true
+Var sample = "Hello Codeup";
+    undefined
+sample.length
+    12
+sample.toUpperCase()
+    "HELLO CODEUP"
+//concantetion
+"Hello Codeup" + " students"
+    Hello Codeup students
+var newSample = sample + " students";
+    Hello Codeup students
+newSample.replace("studens", "Class");
+    "Hello Codeup Class"
+sample.indexOf("c");
+    -1
+sample.indexOf("C");
+    6
+sample.indexOf("P");
+    11
+sample.substring(6, 12);
+    Codeup
+var total = (mermaid * 3);
+    undefined
+total
+    9
+var totalbear = (bear * 3);
+    undefined
+totalbear
+    15
+var totalhercules = (hercules * 3);
+    undefined
+totalhercules
+    3
+var google = 400
+    undefined
+google
+    400
+var amazon =  380
+    undefined
+amazon
+    380
+var facebook = 350
+    undefined
+facebook
+    350
+var googlepay = (google * 6);
+    undefined
+var facepay = (facebook * 10);
+    undefined
+var amapay = (amazon * 4);
+u   ndefined
+amapay
+    1520
+googlepay
+    2400
+facepay
+    3500
+var username = "codeup";
+
+var password = "notastrongpassword";
+
+var passwordlengthvalid = (password.length >= 5);
+
+
