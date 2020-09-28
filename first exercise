@@ -103,6 +103,7 @@ sample.indexOf("P");
     11
 sample.substring(6, 12);
     Codeup
+
 var total = (mermaid * 3);
     undefined
 total
@@ -115,6 +116,26 @@ var totalhercules = (hercules * 3);
     undefined
 totalhercules
     3
+    (total + totalbear + totalhercucles) * 3;
+
+var facebookHours = 10;
+var googleHours = 6;
+var amazonHours = 4;
+
+var facebookPay = facebookHours * 350;
+var googlePay = googleHours * 500;
+var amazonPay = amazonHours * 380;
+
+(facebookPay + googlePay + amazonPayl;
+
+//var FacebookRate = 350;
+//var GoogleRate = 400;
+//var amazonRate = 350;
+
+// (facebookHours * FacebookRate)+ (googleHours * GoogleRate) + (amazonHours * amazonRate);
+
+
+
 var google = 400
     undefined
 google
@@ -139,10 +160,65 @@ googlepay
     2400
 facepay
     3500
+//working through the project on my own
+var classnotfull= true;
+var classfull = false;
+var noconflict = true;
+var enroll = (classnotfull + noconflict);
+
+//brance leading the answer
+var isClassFull = false;
+var isConflict = false;
+
+var canEnroll = !isClassFull && !isConflict;
+//this one above that he created is simple and answers it all
+
+
+//prpblem 3-4 i couldnt even solve so brance is walking through.. learn.
+
+var itemsBought = 3;
+var didBuyTwo = itemsBought > 2;
+var expirationDate = "2020-09-20":
+var today = "2020-09-25";
+var isExpired = expirationDate <= today;
+var isPremium = false;
+
+var canGetDiscount = false;
+
+if(didBuyTwo && !isExpired){
+    canGetDiscount = true;
+} else if(isPremium && !isExpired){
+    canGetDiscount = true;
+} else {
+    canGetDiscount = false;
+}
+//above in words says: if they have buy and is not expired than get discount
+//if they are premium and is not expired they can get discount
+//if neither of the top two are true then they do not get discount
+
+
+//problem number 4
+
 var username = "codeup";
-
 var password = "notastrongpassword";
+var passwordcheck = (password.length>=5);
+var validpassword = password!==username;
+var usernamecheck = (username.length<=20);
 
-var passwordlengthvalid = (password.length >= 5);
+var noSpaceUsername = username.trim();
+var NoSpacePassword = password.trim();
+var CheckSpacesUsername = (username === noSpaceUsername);
+var checkSpacePassword = (password=== NoSpacePassword);
+
+//work through with Brance
+var username1 = "codeup";
+var password1 = "notastrongpassword";
+
+var isFiveChars = password1.length >= 5;
+var doesincludeUsername = password1.indexOf(username1) 1== -1;
+var usernameTooLong = username1.length > 20;
+var isWhitespace = password1.trim() !== password1 || username1.trim() !== username1;
+
+
 
 
