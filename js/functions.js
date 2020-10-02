@@ -89,13 +89,13 @@ var random = Math.floor((Math.random() * 3) + 1);
  // }
  // console.log(isTwo(random));
 
-//********
+// ********
 // walk through with instructor
-// function isTwo(num){
-//     return num === 2;
-// }
-//
-// console.log(isTwo(random));
+function isTwo(num){
+    return num === 2;
+}
+
+console.log(isTwo(random));
 
 /**
  * TODO:
@@ -116,7 +116,7 @@ var random = Math.floor((Math.random() * 3) + 1);
 
                 //**walk through with instructor**
 
-// function calculateTip(percentage, total) {
+// function calculateTip(potercentage, tal) {
 //         return percentage * total;
 // }
 //
@@ -143,7 +143,7 @@ var random = Math.floor((Math.random() * 3) + 1);
 // var tipPercentage = tip/100:
 // var tipDollars = calculateTip(tipPercentage, billTotal).tofixed(fractionDigits: 2);
 //
-// alert("you will neeed to tip $" + tipDollars);
+// alert("you will ne5ed to tip $" + tipDollars);
 
 
 /**

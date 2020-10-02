@@ -20,21 +20,21 @@
  * console.logging the function's return value
  */
 
-// function analyzeColor(Input){
-//     if(Input === "blue"){
-//         return "blue is the color of the sky"
-//     }   else if (Input === "red"){
-//         return "Strawberries are red"
-//     } else if (Input === "cyan"){
-//         return "i dont know what anything about cyan"
-//     } else {
-//         return "that color does not exist"
-//     }
-// }
-//
-// console.log(analyzeColor("blue"));
-// console.log(analyzeColor("red"));
-// console.log(analyzeColor("cyan"));
+function analyzeColor(Input){
+    if(Input === "blue"){
+        return "blue is the color of the sky"
+    }   else if (Input === "red"){
+        return "Strawberries are red"
+    } else if (Input === "cyan"){
+        return "i dont know what anything about cyan"
+    } else {
+        return "that color does not exist"
+    }
+}
+
+console.log(analyzeColor("blue"));
+console.log(analyzeColor("red"));
+console.log(analyzeColor("cyan"));
 
 
 
@@ -51,19 +51,9 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Pass the `randomColor` variable to your function and console.log the results.
  * You should see a different message every time you refresh the page
  */
-//
-//  function analyzeColor(colors) {
-//          if(randomColor === 'blue') {
-//          return "blue is the color of the sky"
-//      }   else if (randomColor === 'red') {
-//         return "Strawberries are red"
-//      } else if (randomColor === "green"){
-//          return "i dont know what anything about cyan"
-//      } else {
-//          return "that color does not exist"
-//      }
-// }
-// console.log(analyzeColor(randomColor));
+
+
+console.log(analyzeColor(randomColor));
 
 
 
@@ -72,8 +62,22 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * TODO:
  * Refactor your above function to use a switch-case statement
  */
-
-
+//
+// var color = prompt("input any color");
+//     switch (color) {
+//         case "red":
+//             alert("red is a dope color, my favorite");
+//             break;
+//         case "orange":
+//             alert("orange is okay but i like oranges");
+//             break;
+//         case "yellow":
+//             alert("bananas are yellow!");
+//             break;
+//         default:
+//             alert(randomColor + " the color you chose is invalid");
+//             break;
+//     }
 
 /**
  * TODO:
@@ -93,9 +97,8 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 //       case "cyan":
 //         alert("i dont know anything about cyan");
 //         break;
-// }   swtich {
-//     return "color does not exist";
 // }
+
 
 
 /* ########################################################################## */
@@ -120,7 +123,20 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * return value.
  */
 
-function calculateTotal()
+let luckyNumber = (0, 1, 2, 3, 4, 5)
+    let parseFloat(0 = 100)
+    let 1 === .10
+    let 2 === .25
+    let 3 === .35
+    let 4 === .50
+    let 5 === 0
+
+function calculateTotal(luckyNumber, 100){
+    return (luckyNumber/100) * 100;
+}
+console.log(calculateTotal(luckyNumber, 3));
+
+
 
 
 
@@ -135,19 +151,18 @@ function calculateTotal()
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
 
-/**
- * TODO:
- * Write some JavaScript that uses a `confirm` dialog to ask the user if they
- * would like to enter a number. If they click 'Ok', prompt the user for a
- * number, then use 3 separate alerts to tell the user:
- *
- * - whether the number is even or odd
- * - what the number plus 100 is
- * - if the number is negative or positive
- *
- * if what the user enters is not a number, use an alert to tell them that, and
- * do *not* display any of the above information.
- *
- * Can you refactor your code to use functions?
- * HINT: The way we prompt for a value could be improved
- */
+// /**
+//  * TODO:
+//  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
+//  * would like to enter a number. If they click 'Ok', prompt the user for a
+//  * number, then use 3 separate alerts to tell the user:
+//  *
+//  * - whether the number is even or odd
+//  * - what the number plus 100 is
+//  * - if the number is negative or positive
+//  *
+//  * if what the user enters is not a number, use an alert to tell them that, and
+//  * do *not* display any of the above information.
+//  *
+//  * Can you refactor your code to use functions?
+//  * HINT: The way we prompt for a value could be improved-->
