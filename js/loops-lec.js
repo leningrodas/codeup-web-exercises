@@ -104,6 +104,12 @@
 
 //TODO TOGETHER: Create a do-while loop that counts up to 20 (inclusive) by 2s (0, 2, 4...)
 // (0, 2, 4...20)
+
+/*
+var m = 0;
+while(m <= 20);
+ */
+
 // var m = 0;
 // do {
 //     console.log(m);
@@ -112,9 +118,9 @@
 
 //TODO: Create a do-while loop that prompts the user for a color and continues to prompt until the string passed is "blue"
 
-do{
-    var myColor = prompt("input a color foo");
-}while (myColor !== blue);
+// do{
+//     var myColor = prompt("input a color foo");
+// }while (myColor !== blue);
 
 /*********************************************
  *               FOR LOOPS
@@ -129,13 +135,26 @@ do{
 
 
 // TODO TOGETHER: Write a for loop that loops through numbers 0 - 5 (inclusive);
-
+//*******   for (initialize; conditionl; increment){ *******
+//   for (var i = 0; i <= 5; i++){
+//       console.log(i);
+// }
 
 // TODO TOGETHER: Why are loops beneficial?
-
+//to repeat conditions over and over again without repeating myself
 
 // TODO TOGETHER: Console.log each color from the array randomColors
 //  var randomColors = ["red","orange","yellow","blue","green"]
+
+// console.log(randomColors[0]);
+// console.log(randomColors[1]);
+// console.log(randomColors[2]);
+// console.log(randomColors[3]);
+//
+//randomColors.length = 5 | final index = 4. so below i can put "index < 5"
+// for (var index = 0; index < randomColors.length; index++){
+//     console.log(randomColors[index]);
+// }
 
 
 // for (var i = 0; i < randomColors.length; i++){
@@ -146,9 +165,19 @@ do{
 
 // TODO TOGETHER: Using a for loop, log all even numbers 0 - 100;
 
+// for (var evenNum = 0; evenNum <= 100; evenNum++){
+//     if(evenNum % 2 === 0){
+//         console.log(evenNum);
+//     }
+// }
 
 // TODO: Using a for loop, log all numbers divisible by 5, from 0 - 100;
 
+// for (var index = 0; index <= 100; index++){
+//     if (index % 5 === 0){
+//         console.log(index);
+//     }
+// }
 
 // TODO: Using a for loop, complete the FizzBuzz challenge:
 //  Your program should count up to 100.
@@ -157,6 +186,20 @@ do{
 //  If divisible by 3 and 5, log "FizzBuzz"
 //  All other cases, just log the number.
 
+//the first if can be "if index % === 0) instead of the long one i used
+// for (let index = 1; index <= 100; index++){
+//     if ((index % 3 === 0) && (index % 5 === 0)){
+//         console.log("fizzBuzz")
+//     } else if (index % 5 === 0) {
+//          console.log("Buzz")
+//     } else if (index % 3 === 0) {
+//         console.log("Fizz")
+//     } else {
+//         console.log(index)
+//     }
+// }
+//
+
 
 
 /*********************************************
@@ -164,29 +207,29 @@ do{
  *********************************************/
 // We can get a loop to stop using break;
 
-// var numberToStopAt = 5;
-//
-// for (var i = 1; i < 100; i++) {
-//
-// 	console.log('Loop counter is: ' + i);
-//
-// 	if (i === numberToStopAt) {
-// 		console.log('We have reached the stopping point: break!');
-// 		// use the break keyword to exit from the while loop
-// 		break;
-// 		// nothing after the break will get processed
-// 		console.log('You will never see this line.');
-// 	}
-// }
+var numberToStopAt = 5;
+
+for (var i = 1; i < 100; i++) {
+
+	console.log('Loop counter is: ' + i);
+
+	if (i === numberToStopAt) {
+		console.log('We have reached the stopping point: break!');
+		// use the break keyword to exit from the while loop
+		break;
+		// nothing after the break will get processed
+		console.log('You will never see this line.');
+	}
+}
 
 
 // We can get an iteration to skip using continue;
-// for (var i = 1; i < 100; i++) {
-//
-// 	if (i % 2 !== 0) {
-// 		// skipping all odd numbers;
-// 		continue;
-// 	}
-//
-// 	console.log('Here is a lovely even number: ' + i);
-// }
+for (var i = 1; i < 100; i++) {
+
+	if (i % 2 !== 0) {
+		// skipping all odd numbers;
+		continue;
+	}
+
+	console.log('Here is a lovely even number: ' + i);
+}
