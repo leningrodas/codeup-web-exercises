@@ -7,29 +7,65 @@
 //  code runs.
 // }
 
+// var i = 0;
+//
+// while (i < 10) {
+//     console.log('while loop iteration #' + i);
+//     i++;
+
 //TODO TOGETHER: Create a while loop that counts up to 10 (non-inclusive) by 1
 // (0, 1, 2...9)
 
-
+// let i = 0;
+// while (i < 10) {
+//     console.log(i);
+//     i++;
+// }
 
 //TODO TOGETHER: Create a while loop that counts down from 20 to 0 (inclusive) by 1
 // (20, 19, 18...0)
 
-
+// let e = 20;
+// while (e >= 0) {
+//     console.log(e);
+//     e--;
+// }
 
 //TODO TOGETHER: Create a while loop that counts up to 20 (inclusive) by 2s (0, 2, 4...)
 // (0, 2, 4...20)
 
-
-
+// let b = 0;
+// while (b <= 20) {
+//     console.log(b);
+//     //important to reassigned the variable!!!!!!!!! b+2 creates an infinite loop.
+//     b+=2;
+// }
 //TODO: Create a while loop that counts to 100 (inclusive) in increments of ten:
-// (10...20...30...)
 
+// (10...20...30...)
+// let c = 10;
+// while (c <= 100) {
+//     console.log(c);
+//     c+=10;
+// }
 
 
 //TODO: Create a while loop that counts down from 50 to 1 (inclusive) in increments of 1:
 // (50, 49, 48, 47, 46 .... 1)
 
+// let d = 50;
+// while (d >= 1) {
+//     console.log(d);
+//     d--;
+// }
+
+
+
+    // var myQuestion;
+    //
+    // while(!myQuestion){
+    //     myQuestion = confirm("would you like to exit");
+    // }
 
 /*********************************************
  *               DO-WHILE LOOPS
@@ -50,19 +86,35 @@
 
 
 // TODO TOGETHER: Why doesnt the example above run?
+//it does not run because i less than 10 is never true
 
-
-// TODO TOGETHER: Refactor the example above using a do-while loop. What behavior do we notice?
+// // TODO TOGETHER: Refactor the example above using a do-while loop. What behavior do we notice?
+// var i = 0;
+// do {
+//     console.log(i);
+//     i++;
+// } while (i < 10);
 
 
 //TODO TOGETHER: Create a do-while loop that asks the user to confirm: "Would you like to exit?" What difference do you notice?
 
+// do {
+//     let secondQuestion = confirm("would you like to exit?")
+// }while(!secondQuestion);
+
 //TODO TOGETHER: Create a do-while loop that counts up to 20 (inclusive) by 2s (0, 2, 4...)
 // (0, 2, 4...20)
-
+// var m = 0;
+// do {
+//     console.log(m);
+//     m+=2;
+// }while(m <= 20);
 
 //TODO: Create a do-while loop that prompts the user for a color and continues to prompt until the string passed is "blue"
 
+do{
+    var myColor = prompt("input a color foo");
+}while (myColor !== blue);
 
 /*********************************************
  *               FOR LOOPS
