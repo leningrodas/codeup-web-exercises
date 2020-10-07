@@ -6,9 +6,20 @@ console.log("warmup js");
 // console.log("hello josh");
 // console.log("hello jesse");
 
-function sayHello(name){
-    console.log("hello " + name);
+// function sayHello(name){
+//     console.log("hello " + name);
+//
+// }
+//
+// sayHello(name: "vivian");
 
+function (str) {
+    if (str === "hello world")
+        return "true" }
+    else if (str === "HELLO WORLD") {
+        return "true";
+    } else {
+            return "false";
+    }
 }
-
-sayHello(name: "vivian");
+console.log(warmup());
