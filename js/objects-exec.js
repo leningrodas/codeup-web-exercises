@@ -71,7 +71,19 @@ shoppers.forEach(function(shopper){
         console.log("final amount owed is $" + shopper.amount);
     }
     })
+/* walk though *****
+var inintialAmount = shopper.amountl
+var discount = shopper.amount * .12;
+var finalAmount = initialAmoun t - discount;
 
+if(initialAmount > 200){
+    console.log("shopper.name + "spent " + initialAmount + "THEY WILL WIN DISCOUNT OF " + discount + " total paid is " + finalAmount)
+    }
+    else {
+    console.log(shopper.name + " was being cheap " + initialAmount);
+    }
+
+  */
 
 
 
@@ -129,7 +141,20 @@ shoppers.forEach(function(shopper){
         console.log(books.Author);
         console.log(books.title);
             })
+/*
 
+books.foreach(function(book, i){
+    var output = "";
+    output += "book # " + (i + 1) + "\n";
+    output += "title " + book.title + "\n";
+    output += 'author: " + book.author.firstname + "" + book.author.lastname + "\n";
+
+    output += "---";
+    console.log(output);
+});
+
+
+ */
 
 
 
@@ -146,8 +171,21 @@ shoppers.forEach(function(shopper){
      */
 function createBook(title, author){
 
+
     }
 
+/*
+function createbook(title, irst, last){
+return {
+ title: title,
+ author: {
+ firstName: fisrt,
+ lastName: last
+}
+};
 
+books.push(createbook(title: "cats cradle", first: "kurt", last: "V"));
+
+ */
 
 })();
