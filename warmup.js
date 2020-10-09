@@ -13,13 +13,19 @@ console.log("warmup js");
 //
 // sayHello(name: "vivian");
 
-function (str) {
-    if (str === "hello world")
-        return "true" }
-    else if (str === "HELLO WORLD") {
-        return "true";
-    } else {
-            return "false";
-    }
+// function (str) {
+//     if (str === "hello world")
+//         return "true" }
+//     else if (str === "HELLO WORLD") {
+//         return "true";
+//     } else {
+//             return "false";
+//     }
+// }
+// console.log(warmup());
+
+var input = "trick or treat"
+function holloWeen () {
+    return input = ["trick", "or", "treat"];
 }
-console.log(warmup());
+console.log(holloWeen());
