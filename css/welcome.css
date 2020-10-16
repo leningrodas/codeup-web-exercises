@@ -9,8 +9,10 @@ h1, h2 {
 body{
     background: blanchedalmond;
     font-family: 'Sansita Swashed', cursive;
+    background-image: url(../photos/londonnight.jpg);
 }
 
 ul {
     list-style: square;
 }
+
