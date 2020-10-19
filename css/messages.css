@@ -5,9 +5,11 @@ body, html {
     margin: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
-
+.message{
+    width: 80%;
+}
 .message-info {
-    width: 100%;
+    width: 80%;
     margin: 5px;
     padding: 10px;
     background-color: cornflowerblue;
@@ -18,7 +20,7 @@ body, html {
 
 }
 .message-success {
-    width: 100%;
+    width: 80%;
     margin: 5px;
     padding: 10px;
     background-color: lightgreen;
@@ -29,7 +31,7 @@ body, html {
 }
 
 .message-warning {
-    width: 100%;
+    width: 80%;
     margin: 5px;
     background-color: yellow;
     padding: 10px;
@@ -40,7 +42,7 @@ body, html {
 
 }
 .message-error {
-    width: 100%;
+    width: 80%;
     margin: 5px;
     background-color: indianred;
     padding: 10px;
