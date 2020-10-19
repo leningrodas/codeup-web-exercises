@@ -6,10 +6,9 @@ h1, h2 {
     text-decoration: underline;
 }
 
-body{
+body {
     background: blanchedalmond;
     font-family: 'Sansita Swashed', cursive;
-    background-image: url(../photos/londonnight.jpg);
 }
 
 ul {
