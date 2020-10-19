@@ -1,0 +1,17 @@
+.fancy-header{
+    color: red;
+
+}
+h1, h2 {
+    text-decoration: underline;
+}
+
+body {
+    background: blanchedalmond;
+    font-family: 'Sansita Swashed', cursive;
+}
+
+ul {
+    list-style: square;
+}
+
