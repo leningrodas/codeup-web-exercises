@@ -66,6 +66,9 @@ a {
     float: right;
     margin: 0 .5em;
 }
+/*
+a way to combine the three on top is using commas: .profile-details,.timeline,.whotofollow{}
+ */
 .media{
     width: 100%;
     background-color: var(--light-bg);
