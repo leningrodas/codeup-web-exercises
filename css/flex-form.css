@@ -60,8 +60,10 @@ body {
     /* TODO:
         Add an explicit size for items along the main axis of 15em.
         Read more about Flex Basis: https://java.codeup.com/appendix/further-reading/html-css/flexbox-additional-concepts/#flex-basis */
-    flex-basis: 20px;
+    flex-basis: 35%;
     justify-content: space-between;
+    width: 20%;
+
 }
 
 
