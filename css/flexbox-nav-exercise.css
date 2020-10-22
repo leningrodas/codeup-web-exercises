@@ -3,28 +3,33 @@
 }
 body {
     margin: 0;
+    background-color: black;
+
 }
 nav {
 
     height: 4.25em;
-    background: #333333;
+    background: darkgrey;
 }
 ul {
     display: flex;
     list-style: None;
     padding: 0;
-    margin: 1em;
+    margin: 0;
     align-items: center;
     height: 100%;
-    justify-content: space-between;
+    font-size: smaller;
+
 }
 nav a {
-    height: 100%;
+
+
     text-decoration: none;
-    color: white;
-    font-family: 'Montserrat','Work Sans', sans-serif;
-    display: inline-block; /* inline-block to increase clickable area beyond the text */
-    padding: 1em; /* increases clickable area of anchor tags on all sides by 1em */
+    color: black;
+    font-family: 'Montserrat',Work Sans, sans-serif;
+    display: inline-block;
+    padding: 1em;
+
 }
 nav a:hover {
     background: blue;
@@ -32,6 +37,9 @@ nav a:hover {
 nav ul li:nth-child(5) {
     margin-left: auto;
     font-size: 3em;
+    padding: 0px;
+    position: relative;
+
 }
 nav ul li:nth-child(6) {
     margin-left: auto;
