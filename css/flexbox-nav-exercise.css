@@ -3,22 +3,28 @@
 }
 body {
     margin: 0;
-    background-color: black;
-
 }
 nav {
 
     height: 4.25em;
     background: darkgrey;
+    position: relative;
+
 }
 ul {
+    height: 100%;
+    /*width: 100%;*/
     display: flex;
     list-style: None;
     padding: 0;
-    margin: 0;
+    margin: 1;
     align-items: center;
-    height: 100%;
     font-size: smaller;
+
+}
+li {
+    z-index: 1;
+    height: 100%;
 
 }
 nav a {
@@ -35,13 +41,16 @@ nav a:hover {
     background: blue;
 }
 nav ul li:nth-child(5) {
-    margin-left: auto;
+    height: 100%;
+    width: 100%;
     font-size: 3em;
-    padding: 0px;
-    position: relative;
+    position: absolute;
+    justify-content: center;
+    z-index: 0;
+    display: flex;
+
 
 }
 nav ul li:nth-child(6) {
     margin-left: auto;
-
-    }
+        }
