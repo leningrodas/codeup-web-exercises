@@ -1,6 +1,6 @@
-    .idea/*
-    *.iml
-    .DS_STORE
-    js/keys1.js
-    api.js
+.idea/*
+*.iml
+.DS_STORE
+js/keys.js
+what.js
 
