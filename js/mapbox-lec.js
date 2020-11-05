@@ -92,7 +92,7 @@ alamoMarker.setPopup(alamoPopup)
 // TODO TOGETHER: Using the Geocoder helper function, log the coordinates of Codeup and recenter the map to focus on Codeup.
 //https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setcenter
 
- geocode('647-48, Temple Bar, Dublin 2, D02 N725, Ireland', mapboxToken).then(function(result) {
+ geocode('311 S Akard St, Dallas, TX 75202', mapboxToken).then(function(result) {
      console.log(result);
      map.setCenter(result);
     map.setZoom(13);
