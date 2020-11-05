@@ -3,9 +3,9 @@ mapboxgl.accessToken = mapboxToken;
 
 var triple = {
     container: 'map',
-    style: 'mapbox://styles/mapbox/dark-v10', // stylesheet location
+    style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
     center: [-96.7969, 32.7763], // starting position [lng, lat]
-    zoom: 15
+    zoom: 19
 }
 
 var map = new mapboxgl.Map(triple)
