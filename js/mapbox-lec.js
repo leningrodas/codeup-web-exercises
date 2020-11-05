@@ -14,13 +14,13 @@
 
 mapboxgl.accessToken = mapboxToken;
 
-var mapOptions = new mapboxgl.Map({
+var mapOptions = {
     container: 'map',
     style: 'mapbox://styles/mapbox/dark-v10', // stylesheet location
     center: [-98.4916, 29.4252], // starting position [lng, lat]
     zoom: 9 // starting zoom
-});
- var map = new mapboxgl.map(mapOptions)
+};
+ var map = new mapboxgl.Map(mapOptions)
 
 
 
@@ -75,10 +75,13 @@ var popup = new mapboxgl.Popup()
     .addTo(map);
 
 
+
 // TODO: Review the popup docs. What are some additional options we can pass to the popup?
 // TODO: Try setting the text by using ".setText()" instead of ".setHTML()"
-
-
+var alamoPopup = new mapboxgl.Popup()
+    .setHTML("<p>Remeber the alamo</p>")
+        .addTo(map);
+alamoMarker.setPopup(alamoPopup)
 
 /**********************************************
  * 					Geocoder
@@ -89,6 +92,20 @@ var popup = new mapboxgl.Popup()
 // TODO TOGETHER: Using the Geocoder helper function, log the coordinates of Codeup and recenter the map to focus on Codeup.
 //https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setcenter
 
+ geocode('647-48, Temple Bar, Dublin 2, D02 N725, Ireland', mapboxToken).then(function(result) {
+     console.log(result);
+     map.setCenter(result);
+    map.setZoom(13);
+
+        new mapboxgl.Marker ()
+            .setLngLat(result)
+            .addTo(map);
+ })
+
+
+
+
+
 
 //TODO: Using the geocode method above, add a marker at Codeup to the map
 //TODO: Instead of setCenter try using map.jumpTo()
@@ -98,3 +115,8 @@ var popup = new mapboxgl.Popup()
 
 // TODO TOGETHER: Reverse Geocoding: Using the reverse geocoding method, enter the coordinates {lng: -98.4861, lat: 29.4260} to get a physical address for the alamo
 // TODO: Reverse geocode coordinates of your choice using the reverse geocode method
+
+
+reverseGeocode({lng: -6.263485, lat: 53.3455165}, mapboxToken).then(function (result){
+    console.log(result);
+})
