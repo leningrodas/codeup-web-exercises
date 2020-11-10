@@ -27,9 +27,9 @@
     <p class="codeup">this is a paragragh using an id, i want to practice using and id as well as the tag</p>
     <ul class="listitems">
         <li>item 1 </li>
-        <li id="oneLi">item 2</li>
-        <li id="twoli">item 3</li>
-        <li class="codeup">item 4</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
     </ul>
     <div>i dont know what to put in here but this will hold this text message </div>
 
@@ -41,7 +41,14 @@
     "use strict";
 
     $(document).ready(function() {
-    $('.codeup').css("border", "1px solid red")
+    $('h1, p, li').css("background-color", "#FFFF00")
+
+
+
+
+        $("h1").each(function(){
+            alert("welcome to the exercises for jquery")
+        });
 
     });
 
