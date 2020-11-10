@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>jQuery Selectors exercises</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <style>
+
+
+    </style>
+
+</head>
+
+<body>
+<main class="container">
+<h1 class="codeup"> welcome to the exercises for jquery</h1>
+
+    <p class="codeup">this is a paragragh using an id, i want to practice using and id as well as the tag</p>
+    <ul class="listitems">
+        <li>item 1 </li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+    </ul>
+    <div>i dont know what to put in here but this will hold this text message </div>
+
+</main>
+
+<!--<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>-->
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+
+    $(document).ready(function() {
+    $('h1, p, li').css("background-color", "#FFFF00")
+
+
+
+
+        $("h1").each(function(){
+            alert("welcome to the exercises for jquery")
+        });
+
+    });
+
+
+</script>
+</body>
+</html>

@@ -3,6 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <title>DOM: Query and Modify</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font: 16px Arial;
+        }
+        .autocomplete {
+            /*the container must be positioned relative:*/
+            position: relative;
+            display: inline-block;
+        }
+        input {
+            border: 1px solid transparent;
+            background-color: #f1f1f1;
+            padding: 10px;
+            font-size: 16px;
+        }
+        input[type=text] {
+            background-color: #f1f1f1;
+            width: 100%;
+        }
+        input[type=submit] {
+            background-color: DodgerBlue;
+            color: #fff;
+        }
+        .autocomplete-items {
+            position: absolute;
+            border: 1px solid #d4d4d4;
+            border-bottom: none;
+            border-top: none;
+            z-index: 99;
+            /*position the autocomplete items to be the same width as the container:*/
+            top: 100%;
+            left: 0;
+            right: 0;
+        }
+        .autocomplete-items div {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #fff;
+            border-bottom: 1px solid #d4d4d4;
+        }
+        .autocomplete-items div:hover {
+            /*when hovering an item:*/
+            background-color: #e9e9e9;
+        }
+        .autocomplete-active {
+            /*when navigating through the items using the arrow keys:*/
+            background-color: DodgerBlue !important;
+            color: #ffffff;
+        }
+    </style>
 </head>
 <body>
 <button id="btn1">change header</button><br>
@@ -17,128 +68,57 @@
 
 <h1 id="main-header">Hello World!</h1>
 
-<ul>
-    <li data-dbid="1">Item 1</li>
-    <li data-dbid="2">Item 2</li>
-    <li data-dbid="3">Item 3</li>
-    <li data-dbid="4">Item 4</li>
-    <li data-dbid="5">Item 5</li>
-</ul>
-<h2 id="sub-header">Hello Again.</h2>
-<p class="sub-paragraph">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-    aliquip ex ea commodo consequat. Duis aute irure dolor in
-    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-    culpa qui officia deserunt mollit anim id est laborum.
-</p>
 
-<script>
-    (function() {
-        "use strict";
-        // TODO: Uncomment next line and get the main header element by id
-        var mainHeader = document.getElementById('main-header');
+<input type="text" list="coffees" onkeyup="ac(this.value)">
+<!-- On keyup calls the function everytime a key is released -->
+<datalist id="coffees">
 
 
-        // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        // mainHeader.innerText = "Javascript is Cool"
-        // TODO: Uncomment the next line and get the sub header element by id
-        var subHeader = document.getElementById("sub-header");
+</datalist>
+    <script type="text/javascript">
+        var coffees = [
+            {id: 1, name: 'Light City', roast: 'light', text: "It will make your city lights light up!" },
+            {id: 2, name: 'Half City', roast: 'light'},
+            {id: 3, name: 'Cinnamon', roast: 'light'},
+            {id: 4, name: 'City', roast: 'medium'},
+            {id: 5, name: 'American', roast: 'medium'},
+            {id: 6, name: 'Breakfast', roast: 'medium'},
+            {id: 7, name: 'High', roast: 'dark'},
+            {id: 8, name: 'Continental', roast: 'dark'},
+            {id: 9, name: 'New Orleans', roast: 'dark'},
+            {id: 10, name: 'European', roast: 'dark'},
+            {id: 11, name: 'Espresso', roast: 'dark'},
+            {id: 12, name: 'Viennese', roast: 'dark'},
+            {id: 13, name: 'Italian', roast: 'dark'},
+            {id: 14, name: 'French', roast: 'dark'},
+        ];
 
-        // TODO: Set the text color of subHeader to blue
-        // subHeader.style.color = '#1E90FF';
-        // TODO: Uncomment the next line and get all list items
-        var listItems = document.getElementsByTagName("li");
+    /*list of available options*/
+    var n= coffees.length; //length of datalist tags
 
+    function ac(value) {
+        document.getElementById('coffees').innerHTML = '';
+        //setting datalist empty at the start of function
+        //if we skip this step, same name will be repeated
 
+        l=value.length;
+        //input query length
+        for (var i = 0; i<n; i++) {
+            if(((tags[i].toLowerCase()).indexOf(value.toLowerCase()))>-1)
+            {
+                //comparing if input string is existing in tags[i] string
 
-        // TODO: Set text color on every other list item to grey
+                var node = document.createElement("option");
+                var val = document.createTextNode(coffees[i]);
+                node.appendChild(val);
 
-        // for (var i = 0; i < listItems.length; i += 1) {
-        //     if (i % 2 === 0) {
-        //         console.log(listItems[i]);
-        //         listItems[i].style.color='red';
-        //     }
-        // }
-
-        // TODO: Set text color of li with dbid = 1 to blue
-        for (var i = 0; i < listItems.length; i += 1) {
-            // if (listItems[i].getAttribute('data-dbid') === '1'){
-            //     listItems[i].style.color="blue";
-            //     console.log(listItems[i]);
-            // }
-            if (i % 2 === 1) {
-                console.log(listItems[i]);
-                listItems[i].style.color='grey';
+                document.getElementById("coffees" +
+                    "").appendChild(node);
+                //creating and appending new elements in data list
             }
         }
+    }
 
-        //another way to do so.
-        // document.querySelector('[daa-dbid="1"]').style.color = "red"
-
-        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        var subParagraphs = document.getElementsByClassName('sub-paragraph');
-
-
-        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        // subParagraphs[0].innerText = "Mission Accomplished!";
-
-        //***exercise dom events ****
-
- //button 1
-        var changeheader = function (){
-            mainHeader.innerText = "Javascript is Cool"
-        }
-        var btn1 = document.getElementById('btn1');
-        btn1.addEventListener("click", changeheader);
-
-//button 2
-
-        var changeSubHeader = function () {
-            subHeader.style.color = '#1E90FF';
-
-        }
-        var btn2 = document.getElementById('btn2');
-        btn2.addEventListener('click', changeSubHeader);
-
-
-//button 3
-        var changeOddItem = function (){
-            for (var i = 0; i < listItems.length; i += 1) {
-                if (i % 2 === 0) {
-                    console.log(listItems[i]);
-                    listItems[i].style.color='red';
-                }
-            }
-
-        }
-        var btn3 = document.getElementById('btn3');
-        btn3.addEventListener('click', changeOddItem);
-
-
-//button 4
-        var changeParagraph = function () {
-            subParagraphs[0].innerText = "Mission Accomplished!";
-        }
-        var btn4 = document.getElementById('btn4');
-        btn4.addEventListener('click', changeParagraph);
-
-//button 5
-        var changeEvenItems = function () {
-            for (var i = 0; i < listItems.length; i += 1) {
-                if (i % 2 === 1) {
-                    console.log(listItems[i]);
-                    listItems[i].style.color='blue';
-                }
-            }
-            }
-            var btn5 = document.getElementById('btn5');
-        btn5.addEventListener('click', changeEvenItems);
-
-
-    })();
 </script>
 </body>
 </html>
