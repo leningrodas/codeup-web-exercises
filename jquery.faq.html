@@ -6,12 +6,26 @@
     <style>
             .invisible {
                 visibility: hidden;
-            }
 
+
+            }
+            .photo{
+                opacity: .5;
+            }
+            dt{
+                display: flex;
+                font-size: 40px;
+                justify-content: center;
+            }
+           .bgcolor{
+               background-color: yellow;
+           }
 
     </style>
 </head>
 <body>
+<!--<div class="photo" style="background-image: url('photos/yosemite.jpg');">-->
+
     <h1> National Park FAQs</h1>
 <dl>
 
@@ -50,12 +64,45 @@
     <dd id="main" class="invisible">- Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined.
     </dd>
 </dl>
-
-
-
     <form>
         <button id="lock-a" class="lock-out" type="submit">Lock In</button>
     </form>
+<div>
+    <h3>Yosemite national park</h3>
+    <ul class="prnt1" >
+        <li>IT WAS HOME TO THE COUNTRY’S FIRST PARK GUARDIAN</li>
+        <li>WHEN THE TIMING IS RIGHT, ONE OF THE PARK’S WATERFALLS GLOWS</li>
+        <li>IT IS REVERED AS THE BIRTH PLACE OF ROCK CLIMBING FOR SPORT</li>
+        <li>YOSEMITE’S MOST FAMOUS HOTEL WAS USED AS A WARTIME HOSPITAL.</li>
+    </ul>
+</div>
+<div>
+    <h3>Sequoia national park</h3>
+    <ul class="prnt1">
+        <li>Sequoia was the first park created to protect a living organism</li>
+        <li>Sequoia is home to the tallest mountain in the lower 48</li>
+        <li>Sequoias are some of the largest and oldest trees in the world</li>
+        <li>The parks have over 800 miles of trails.</li>
+    </ul>
+</div>
+<div>
+    <h3>Cliffs of Moher</h3>
+    <ul class="prnt1">
+        <li>It is the site of ancient Irish legends</li>
+        <li>Second most popular tourist destination in Ireland</li>
+        <li>SThere are an estimated 30,000 birds living on the cliffs, representing more than 20 species</li>
+        <li>The cliffs’ jarring beauty has inspired legends ranging from underwater mythical cities to a witch falling in love with Cu Chulainn</li>
+    </ul>
+</div>
+
+<button id="button1" class="colorbtn" type="submit">Change text background</button>
+<br>
+<button id="button2" class="colorbtn" type="submit">font weight</button>
+<br>
+<button id="button3" class="colorbtn" type="submit">first li blue color</button>
+
+
+
 
 
 
@@ -73,12 +120,31 @@
     $('#lock-a').click(function(e) {
         e.preventDefault();
         $('dd').toggleClass('invisible');
-    });
+         $('dd').css("color", "black")
+           });
 
     $('dt').dblclick(function(e){
         e.preventDefault();
         $('dt').css("color", "red")
     });
+
+
+
+    $("#button1").click(function (){
+       $(".prnt1 > li").each().children().css('background-color', "yellow");
+    });
+
+    $("#button2").dblclick(function(){
+        $("ul").children().css("font-weight", "bold")
+    });
+
+    $("#button3").dblclick(function(){
+        $(".prnt1").next().css("color", "blue")
+    });
+
+
+
+
 
 </script>
 </body>
