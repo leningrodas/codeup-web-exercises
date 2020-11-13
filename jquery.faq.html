@@ -24,6 +24,15 @@
     </style>
 </head>
 <body>
+<div id="divtohide">
+    <h1 id="header">
+        "Would you like to sign up for our newsletter?"<span id="x">X</span>
+    </h1>
+
+</div>
+
+
+
 <!--<div class="photo" style="background-image: url('photos/yosemite.jpg');">-->
 
     <h1> National Park FAQs</h1>
@@ -68,8 +77,8 @@
         <button id="lock-a" class="lock-out" type="submit">Lock In</button>
     </form>
 <div>
-    <h3>Yosemite national park</h3>
-    <ul class="prnt1" >
+    <h3 id="yosemite">Yosemite national park</h3>
+    <ul id="yosemite2" class="invisible" >
         <li>IT WAS HOME TO THE COUNTRY’S FIRST PARK GUARDIAN</li>
         <li>WHEN THE TIMING IS RIGHT, ONE OF THE PARK’S WATERFALLS GLOWS</li>
         <li>IT IS REVERED AS THE BIRTH PLACE OF ROCK CLIMBING FOR SPORT</li>
@@ -77,8 +86,8 @@
     </ul>
 </div>
 <div>
-    <h3>Sequoia national park</h3>
-    <ul class="prnt1">
+    <h3 id="sequoia">Sequoia national park</h3>
+    <ul  id="sequoia1" class="invisible">
         <li>Sequoia was the first park created to protect a living organism</li>
         <li>Sequoia is home to the tallest mountain in the lower 48</li>
         <li>Sequoias are some of the largest and oldest trees in the world</li>
@@ -86,8 +95,8 @@
     </ul>
 </div>
 <div>
-    <h3>Cliffs of Moher</h3>
-    <ul class="prnt1">
+    <h3 id="moher">Cliffs of Moher</h3>
+    <ul id="moher1" class="invisible">
         <li>It is the site of ancient Irish legends</li>
         <li>Second most popular tourist destination in Ireland</li>
         <li>SThere are an estimated 30,000 birds living on the cliffs, representing more than 20 species</li>
@@ -130,19 +139,33 @@
 
 
 
-    $("#button1").click(function (){
-       $(".prnt1 > li").each().children().css('background-color', "yellow");
+    // $("#button1").click(function (){
+    //    $(".prnt1 > li").each().children().css('background-color', "yellow");
+    // });
+    //
+    // $("#button2").dblclick(function(){
+    //     $("ul").children().css("font-weight", "bold")
+    // });
+    //
+    // $("#button3").dblclick(function(){
+    //     $(".prnt1").next().css("color", "blue")
+    // });
+
+    $('#x').click(function() {
+        $('#divtohide').hide();
     });
 
-    $("#button2").dblclick(function(){
-        $("ul").children().css("font-weight", "bold")
-    });
+    $('#yosemite').click(function(){
+        $(".yosemite2").toggle();
+    })
 
-    $("#button3").dblclick(function(){
-        $(".prnt1").next().css("color", "blue")
-    });
+    $('#sequoia').click(function(){
+        $(".sequoia1").slidetoggle();
+    })
 
-
+    $('#moher').click(function(){
+        $(".moher1").slideToggle().show();
+    })
 
 
 
