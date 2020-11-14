@@ -6,9 +6,8 @@
     <style>
             .invisible {
                 visibility: hidden;
-
-
             }
+            .
             .photo{
                 opacity: .5;
             }
@@ -28,6 +27,7 @@
     <h1 id="header">
         "Would you like to sign up for our newsletter?"<span id="x">X</span>
     </h1>
+    <h2 id="user" class="invisible">User would you like to register to this amazing testing side?</h2>
 
 </div>
 
@@ -156,17 +156,23 @@
     });
 
     $('#yosemite').click(function(){
-        $(".yosemite2").toggle();
+        $("#yosemite2").toggleClass();
+        $("#yosemite2").slideUp(2400);
     })
 
     $('#sequoia').click(function(){
-        $(".sequoia1").slidetoggle();
+        $("#sequoia1").toggleClass();
+        $("#sequoia1").slideToggle(2500);
     })
 
     $('#moher').click(function(){
-        $(".moher1").slideToggle().show();
+        $("#moher1").toggleClass()
+            $("#moher1").fadeToggle(2500);
     })
 
+    // $("#user").fadeIn(function(){
+    //     $("#user").toggleClass();
+        $("h2").fadeIn(8000,);
 
 
 </script>
