@@ -27,7 +27,7 @@
     <h1 id="header">
         "Would you like to sign up for our newsletter?"<span id="x">X</span>
     </h1>
-    <h2 id="user" class="invisible">User would you like to register to this amazing testing side?</h2>
+    <h2 id="user">User would you like to register to this amazing testing side?</h2>
 
 </div>
 
@@ -170,10 +170,9 @@
             $("#moher1").fadeToggle(2500);
     })
 
-    // $("#user").fadeIn(function(){
-    //     $("#user").toggleClass();
-        $("h2").fadeIn(8000,);
-
+     $("#user").fadeIn(function() {
+        $("#user").hide().fadeIn(8000);
+     });
 
 </script>
 </body>
