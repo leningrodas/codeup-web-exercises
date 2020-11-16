@@ -139,17 +139,17 @@
 
 
 
-    // $("#button1").click(function (){
-    //    $(".prnt1 > li").each().children().css('background-color', "yellow");
-    // });
-    //
-    // $("#button2").dblclick(function(){
-    //     $("ul").children().css("font-weight", "bold")
-    // });
-    //
-    // $("#button3").dblclick(function(){
-    //     $(".prnt1").next().css("color", "blue")
-    // });
+    $("#button1").click(function (){
+       $(".prnt1 > li").each().children().css('background-color', "yellow");
+    });
+
+    $("#button2").dblclick(function(){
+        $("ul").children().css("font-weight", "bold")
+    });
+
+    $("#button3").dblclick(function(){
+        $(".prnt1").next().css("color", "blue")
+    });
 
     $('#x').click(function() {
         $('#divtohide').hide();
@@ -161,8 +161,8 @@
     })
 
     $('#sequoia').click(function(){
-        $("#sequoia1").toggleClass();
-        $("#sequoia1").slideToggle(2500);
+        $("#sequoia1").hide();
+        .slideToggle(2500);
     })
 
     $('#moher').click(function(){
