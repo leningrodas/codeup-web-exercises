@@ -41,13 +41,20 @@
     "use strict";
 
     $(document).ready(function() {
-    $('h1, p, li').css("background-color", "#FFFF00")
 
+        $('h1').click(function(e) {
+            // console.log(e.target);
+            $(e.target).css("background", "red");
+        });
 
+        $("p").dblclick(function (){
+            $("p").css("font-size", "18px")
+        })
 
-
-        $("h1").each(function(){
-            alert("welcome to the exercises for jquery")
+        $('li').hover(function() {
+            $(this).css('color', 'red');
+        }, function() {
+            $(this).css('color', 'black');
         });
 
     });
