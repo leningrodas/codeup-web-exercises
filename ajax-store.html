@@ -8,6 +8,8 @@
             background-color: rosybrown;
             border: 2px solid red;
             width: 100%;
+            align-items: center;
+            align-content: center;
         }
 
     </style>
@@ -62,17 +64,16 @@
     function tableStructure (products) {
             var productsHTML = "";
 
-            products.forEach(function(product) {
-                productsHTML += "<table>";
-                productsHTML += "<tbody>";
-                productsHTML += "<td>" + product.title + "</td>";
-                productsHTML += "<td>" + product.quantity + "</td>";
-                productsHTML += "<td>" + product.categories + "</td>";
-                productsHTML += "<td>" + product.price + "</td>";
-                productsHTML += "</tbody>"
-                productsHTML += "</table>";
+            products.forEach(function(names) {
 
-            });
+                html += '<img src="img/card4light.jpg" style="border: solid 3px #483018; border-radius: 50%; width: 100%" >' + '</>';
+                html += '<strong class="text-center" style="font-size: 1.5em">' + coffee.name + '</strong>';
+                html += '<p>' + coffee.text + '</p>';
+
+                html += '</div>';
+                // console.log(html);
+                return html;
+            }
             $('#insertProducts').html(productsHTML);
         }
 
