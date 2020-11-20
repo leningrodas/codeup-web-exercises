@@ -11,8 +11,6 @@ var triple = {
 var map = new mapboxgl.Map(triple)
 
 
-
-
 var markerOptions = {
     color: "#FF0000",
 
