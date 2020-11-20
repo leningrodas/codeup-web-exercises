@@ -53,7 +53,7 @@ $(document).ready(function () {
 
 
         function show(data){
-            var html = '<div id="weathercard" class="card-deck" style="background-color: black; color: whitesmoke; border: 5px solid">';
+            var html = '<div id="weathercard" class="card-deck" style=" color: whitesmoke; border: 5px solid">';
                 html +='<h3 class="card-header justify-content-center"><strong>Weather</strong></h3>'
                 html += "<li><strong>Temperature</strong>: " + data.main.temp + "</li>"
                 html += "<li><strong>Humidity</strong>: " + data.main.humidity + "</li>"

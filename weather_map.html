@@ -11,7 +11,14 @@
         body {
             background-color: lightgrey;
         }
-
+        .jumbotron{
+            color: ghostwhite;
+            background-image: url("photos/weather1_0.jpg");
+            height: 25em;
+        }
+        #weathercard {
+            background-image: url("photos/weather1_0.jpg");
+        }
 
     </style>
 </head>
@@ -26,8 +33,7 @@
     <h1 class="display-4">Welcome</h1>
     <p class="lead">Up to date weather map for anywhere you can think of!</p>
     <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+
 </div>
 
 
@@ -43,7 +49,7 @@
 <pre id="coordinates" class="coordinates"></pre>
 <hr>
 <div class="container d-flex">
-<div id="weathercard" class="card" style="width: 18rem;">
+<div id="weathercard" class="card justify-content-center" style="width: 18rem;">
 
 </div>
 </div>
