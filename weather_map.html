@@ -7,6 +7,13 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body {
+            background-color: lightgrey;
+        }
+
+
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-light bg-dark">
@@ -25,7 +32,9 @@
 
 
 <hr>
+<span id="error"></span>
 <div>
+
     <input type="text" id="userInput" placeholder="City Name">
     <button id="submitWeather" class="btn btn-primary">Search City</button>
 </div>
@@ -33,19 +42,11 @@
 <div id='map' style='width: 100%; height: 600px;'></div>
 <pre id="coordinates" class="coordinates"></pre>
 <hr>
-
+<div class="container d-flex">
 <div id="weathercard" class="card" style="width: 18rem;">
-    <div class="card-header">
-        Featured
-    </div>
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">Overcast:</li>
-        <li class="list-group-item">Humidity:</li>
-        <li class="list-group-item">Wind:</li>
-        <li class="list-group-item">Wind:</li>
-    </ul>
-</div>
 
+</div>
+</div>
 
 
 
@@ -63,8 +64,8 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 <script src="js/keys.js"></script>
-<script src="js/mapbox-geocoder.utils.js"></script>
-<script src="js/weather_map.js"></script>
 
+<script src="js/weather_map.js"></script>
+<script src="js/mapbox-geocoder.utils.js"></script>
 </body>
 </html>
