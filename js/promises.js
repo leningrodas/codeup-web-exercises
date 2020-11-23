@@ -1,11 +1,32 @@
-
+//     function successIfEvenUTCSecond() {
+//         return new Promise((resolve, reject) => {
+//             setTimeout(function() {
+//                 const second = new Date().getUTCSeconds();
+//                 if (second % 2 === 0) {
+//                     resolve(second);
+//                 } else {
+//                     reject(second);
+//                 }
+//             }, 200);
+//         });
+//     }
+//
+//     const aPromise = successIfEvenUTCSecond();
+//
+// // console.log(aPromise);
+// //
+//     aPromise.then((data) => {
+//         console.log(data + " is an even number");
+//     }).catch((err) => {
+//         console.error(err + " is an odd number");
+//     });
 
 // TODO: if aPromise resolves, console.log 'VALUE_HERE is an even number!'
 // TODO: if aPromise rejects, console.error 'VALUE_HERE is an odd number!'
 
 
 
-// fetch(url, {headers: {'Authorization': '960c15ca35844e409811ff1f4815697b3680bc20'}})
+//
 
 // ///walk-through
 // function wait (num){
@@ -24,20 +45,20 @@
 
 
 
-fetch("https://api.github.com/users/:username/received_events/public",{headers: {'Authorization': 'token ' + github_API}})
+fetch("https://api.github.com/events",{headers: {'Authorization': 'token ' + github_API}})
     .then(res => res.json())
-    .then(console.log)
-    .catch(console.log)
+    .then(({type}) => {
+     console.log(type);
+       })
+    .catch(console.log("not-working"));
 
 
 
-
-
-// fetch('https://swapi.dev/api/people/1')
-//     .then((response) => {
-//         return response.json();
-//     })
-//     .then((data) => {
-//         console.log(data);
-//     })
-//     .catch(console.log);
+fetch('https://swapi.dev/api/people/1')
+    .then((response) => {
+        return response.json();
+    })
+    .then(({height}) => {
+        console.log(height);
+    })
+    .catch(console.log);
