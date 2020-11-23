@@ -1,54 +1,111 @@
 $(document).ready(function () {
 
-
-
     mapboxgl.accessToken = mapboxToken;
 
-    var triple = {
+    var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/dark-v10', // stylesheet location
         center: [-96.7969, 32.7763], // starting position [lng, lat]
         zoom: 10
+    });
+
+    $.get("https://api.openweathermap.org/data/2.5/onecall", {
+        APPID: OPEN_WEATHER_APPID,
+        lat: 29.423017,
+        lon: -98.48527,
+        units: "imperial",
+        exclude: "minutely,hourly,alerts"
+    }).done(function (data) {
+        dropPin();
+        console.log(data);
+
+    });
+
+
+    var currentMarkers = [];
+
+    function dropPin(coordinates){
+        var marker = new mapboxgl.Marker()
+        currentMarkers.push(marker);
+      currentMarkers[0].setLngLat(coordinates)
+      currentMarkers[0].addTo(map);
     }
 
-    var map = new mapboxgl.Map(triple)
+    function enablePin(){
+        map.on('click', function (e){
+            dropPin(e.lngLat);
+            console.log(e.lngLat);
+            retrieveWeather(e.lngLat.lng, e.lngLat.lat);
+        });
+    }
 
-    var coordinates = document.getElementById('coordinates');
+    function retrieveWeather(longitude, latitude){
+         $.get("http://api.openweathermap.org/data/2.5/weather", {
+             APPID: OPEN_WEATHER_APPID,
+             lat: latitude,
+             lon: longitude,
+             units: "imperial"
+         }).done(function (data) {
+             console.log(data);
+         });
 
+    }
+
+
+
+
+
+
+    // var coordinates = document.getElementById('coordinates');
+    //
     var dallasLocation = new mapboxgl.Marker()
         .setLngLat([-96.7969, 32.7763])
         .setDraggable(true)
         .addTo(map);
 
-    // $.get("http://api.openweathermap.org/data/2.5/weather", {
-    //         APPID: OPEN_WEATHER_APPID,
-    //         q: "london, uk",
-    //         units: "imperial"
-    //     }).done(function (data) {
-    //         console.log(data);
-    //     });
+    //
 
-    $('#submitWeather').click(function() {
-        var city = $("#userInput").val();
-        if (city != '') {
-            $.get("http://api.openweathermap.org/data/2.5/weather", {
-                APPID: OPEN_WEATHER_APPID,
-                q: city,
-                units: "imperial"
-            }).done( function (data) {
-                    var widget = show(data);
 
-                    $("#map").html(widget);
 
-                    $("#city").val('');
-                    console.log(data);
-                }
-            );
-        } else {
-            $('#error').html('Field cannot be empty');
-        }
 
-    });
+
+    function onDragEnd() {
+        var lngLat = dallasLocation.getLngLat();
+        coordinates.style.display = 'block';
+        coordinates.innerHTML =
+            'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
+        console.log(lngLat)
+    }
+
+
+
+
+
+
+
+
+
+    // $('#submitWeather').click(function() {
+    //     var city = $("#userInput").val();
+    //     if (city != '') {
+    //         $.get("http://api.openweathermap.org/data/2.5/weather", {
+    //             APPID: OPEN_WEATHER_APPID,
+    //             q: city,
+    //             units: "imperial"
+    //         }).done( function (data) {
+    //                 var widget = show(data);
+    //
+    //                 $("#map").html(widget);
+    //
+    //                 $("#city").val('');
+    //                 console.log(data);
+    //             }
+    //         );
+    //     } else {
+    //         $('#error').html('Field cannot be empty');
+    //     }
+    //
+    // });
 
 
 
@@ -64,33 +121,6 @@ $(document).ready(function () {
                 $('#weathercard').append(html);
 
             }
-
-
-
-
-
-
-    //
-    // function onDragEnd() {
-    //     var lngLat = dallasLocation.getLngLat();
-    //     coordinates.style.display = 'block';
-    //     coordinates.innerHTML =
-    //         'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
-    //     console.log(lngLat)
-    // }
-    //
-    // dallasLocation.on('dragend', onDragEnd);
-
-     });
-
-
-
-
-
-
-
-
-
-
+});
 
 
