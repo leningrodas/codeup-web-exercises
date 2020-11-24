@@ -88,13 +88,13 @@
     // ============ Fetch API
 
     // jQuery AJAX request example
-    // $.ajax('https://swapi.dev/api/people/1')
-    //     .done(function(data) {
-    //         console.log(data);
-    //     })
-    //     .fail(function(jqXHR, message) {
-    //         console.log(message);
-    //     });
+    $.ajax('https://swapi.dev/api/people/1')
+        .done(function(data) {
+            console.log(data);
+        })
+        .fail(function(jqXHR, message) {
+            console.log(message);
+        });
 
     // Fetch API GET example
         fetch('https://swapi.dev/api/people/1')
@@ -105,12 +105,16 @@
                 console.log(data);
             })
             .catch(console.log);
+    fetch('https://swapi.dev/api/people/1')
+        .then((response) => response.json())
+        .then(console.logname)
+        .catch(console.log)
 
 
 
 
     // Fetch API POST example
-    //
+
     // fetch('https://hookb.in/eKZ0mV6k1aTr9g86Q7JM', {
     //     method: 'POST',
     //     headers: {
@@ -123,8 +127,8 @@
     // })
     //     .then(console.log)
     //     .catch(console.log);
-    //
-    //
+
+
 
 
 
